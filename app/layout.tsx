@@ -1,8 +1,8 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Oswald } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const oswald = Oswald({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Next.js + Prisma + TypeScript",
@@ -17,7 +17,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={
-          "${inter.className} font-mono bg-gray-200 text-black container mx-auto p-4 "
+          "${oswald.className} sans-serif bg-white text-black container mx-auto p-4 "
         }
       >
         {children}
