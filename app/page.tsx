@@ -3,7 +3,7 @@ import { prisma } from "./db";
 import Navbar from "./components/Navbar";
 
 export default async function Home() {
-  const users = await prisma.users.findMany();
+  const users = await prisma.user.findMany();
   // await prisma.users.create({
   //   data: {
   //     name: "Alice",
