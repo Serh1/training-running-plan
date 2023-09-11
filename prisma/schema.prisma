@@ -10,21 +10,35 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model users {
+model User {
   id        Int      @id @default(autoincrement())
   name      String
-  email     String   
+  email     String
   password  String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+  races     RaceUser[] // This establishes the many-to-many relationship
 }
 
-model races{
+model Race {
   id        Int      @id @default(autoincrement())
-  runnerId  Int?
   name      String
   distance  Int
   date      DateTime
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+  runners   RaceUser[] // This establishes the many-to-many relationship
 }
+
+model RaceUser {
+  id        Int      @id @default(autoincrement())
+  raceId    Int
+  userId    Int
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  race      Race     @relation(fields: [raceId], references: [id])
+  user      User     @relation(fields: [userId], references: [id])
+  @@index([raceId], name: "raceId")
+  @@index([userId], name: "userId")
+}
+
