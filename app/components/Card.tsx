@@ -18,7 +18,7 @@ const Card = ({ onClick, data, selected }: RaceCardProps) => {
       className={`flex items-center justify-center
         p-px m-2 w-20 h-20 rounded-2xl
         text-4xl shadow font-bold
-        cursor-pointer hover:scale-110 ${cardClass}`}
+        cursor-pointer  hover:scale-110 ${cardClass}`}
       onClick={handleClick}
     >
       {data}

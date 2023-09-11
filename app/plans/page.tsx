@@ -65,7 +65,7 @@ export default function Page() {
     <>
       <Navbar />
       <div>What kind of race?</div>
-      <div className="bg-slate-100 h-full container mx-auto px-4 flex row-auto justify-center items-center p-4 rounded">
+      <div className="bg-gray-200 h-full container flex row-auto justify-center items-center p-4 rounded-xl">
         {distances.map((distance) => (
           <Card
             data={distance.toString() + "K"}
@@ -75,7 +75,7 @@ export default function Page() {
         ))}
       </div>
       <div>How many weeks for training?</div>
-      <div className="bg-slate-100 h-full container mx-auto px-4 flex row-auto justify-center items-center p-4 rounded">
+      <div className="bg-gray-200 h-full container mx-auto px-4 flex row-auto justify-center items-center p-4 rounded-xl">
         {weeks.map((week) => (
           <Card
             data={week.toString()}
@@ -85,7 +85,7 @@ export default function Page() {
         ))}
       </div>
       <div>How many runs per week?</div>
-      <div className="bg-slate-100 h-full container mx-auto px-4 flex row-auto justify-center items-center p-4 rounded">
+      <div className="bg-gray-200 h-full container mx-auto px-4 flex row-auto justify-center items-center p-4 rounded-xl">
         {runsPerWeek.map((runPerWeek) => (
           <Card
             data={runPerWeek}
@@ -96,8 +96,8 @@ export default function Page() {
       </div>
       <div>Seleceted:</div>
       <div
-        className="bg-slate-100 h-full container mx-auto px-4 
-      flex row-auto justify-center items-center p-4 rounded"
+        className="bg-gray-200 h-full container mx-auto px-4 
+      flex row-auto justify-center items-center p-4 rounded-xl"
       >
         Your plan for
         <div
@@ -142,7 +142,7 @@ export default function Page() {
           Generate Plan
         </button>
         {generatedPlan && (
-          <div>
+          <div className="container mx-0">
             <h2>Your Generated Plan</h2>
             <p>{generatedPlan}</p>
           </div>
