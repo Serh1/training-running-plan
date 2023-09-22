@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <nav className="sticky top-0 bg-gray-200 flex rounded-xl items-center justify-between flex-wrap z-10 p-6">
+    <nav className="myContainer sticky top-0 bg-gray-200 flex rounded-xl items-center mx-auto flex-wrap z-10 p-6">
       <div className="block lg:hidden">
         <button className="flex items-center px-3 py-2 border hover:bg-blue-500 hover:border-blue">
           <svg

@@ -65,7 +65,7 @@ export default function Page() {
     <>
       <Navbar />
       <div>What kind of race?</div>
-      <div className="bg-gray-200 h-full container flex row-auto justify-center items-center p-4 rounded-xl">
+      <div className="bg-gray-200 myContainer h-full mx-auto container lg flex row-auto justify-center items-center p-4 rounded-xl">
         {distances.map((distance) => (
           <Card
             data={distance.toString() + "K"}
@@ -75,7 +75,7 @@ export default function Page() {
         ))}
       </div>
       <div>How many weeks for training?</div>
-      <div className="bg-gray-200 h-full container mx-auto px-4 flex row-auto justify-center items-center p-4 rounded-xl">
+      <div className="bg-gray-200 myContainer h-full container mx-auto px-4 flex row-auto justify-center items-center p-4 rounded-xl">
         {weeks.map((week) => (
           <Card
             data={week.toString()}
@@ -85,7 +85,7 @@ export default function Page() {
         ))}
       </div>
       <div>How many runs per week?</div>
-      <div className="bg-gray-200 h-full container mx-auto px-4 flex row-auto justify-center items-center p-4 rounded-xl">
+      <div className="bg-gray-200 myContainer h-full container mx-auto px-4 flex row-auto justify-center items-center p-4 rounded-xl">
         {runsPerWeek.map((runPerWeek) => (
           <Card
             data={runPerWeek}
@@ -96,7 +96,7 @@ export default function Page() {
       </div>
       <div>Seleceted:</div>
       <div
-        className="bg-gray-200 h-full container mx-auto px-4 
+        className="bg-gray-200 myContainer h-full container mx-auto px-4 
       flex row-auto justify-center items-center p-4 rounded-xl"
       >
         Your plan for
@@ -142,7 +142,7 @@ export default function Page() {
           Generate Plan
         </button>
         {generatedPlan && (
-          <div className="container mx-0">
+          <div className="myContainer container mx-0">
             <h2>Your Generated Plan</h2>
             <p>{generatedPlan}</p>
           </div>

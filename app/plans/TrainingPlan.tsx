@@ -126,11 +126,11 @@ function generatePlan(distance: number, weeks: number, runsPerWeek: string) {
             Week#{plan.indexOf(week) + 1}
             {week.map((run) => {
               return (
-                <div className="flex-col  w-full">
-                  <li className="flex flex-row-reverse justify-center items-center m-2">
+                <div className="flex-col  w-full ">
+                  <li className="flex flex-row-reverse justify-center items-center m-2 bg-blue-500 text-white rounded-sm">
                     {run.day}
                   </li>
-                  <li className="flex flex-row-reverse justify-center items-center m-2">
+                  <li className="flex flex-row-reverse justify-center items-center m-2 bg-teal-800 text-white rounded-sm">
                     {run.type === "Rest"
                       ? run.type
                       : run.distance + "K " + run.type}
